@@ -1,0 +1,14 @@
+{
+  "name": "fsm-js",
+  "version": "1.0.0",
+  "description": "Lightweight FSM lib based on TS",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Ido Weitzman",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
