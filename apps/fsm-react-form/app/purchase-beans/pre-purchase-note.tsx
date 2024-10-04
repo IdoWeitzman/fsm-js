@@ -1,5 +1,5 @@
 import { OutlinedButton } from "@/components/outlined-button";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 interface PrePurchaseNoteProps {
   onAckClick: () => void;

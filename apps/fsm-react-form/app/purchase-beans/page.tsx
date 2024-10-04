@@ -1,6 +1,6 @@
 "use client";
-import { type FsmSchema, useFSM } from "fsm-react";
-import { Box, Typography } from "@mui/material";
+import { useFSM } from "fsm-react";
+import { Box } from "@mui/material";
 import { useRouter } from "next/navigation";
 import { PrePurchaseNote } from "./pre-purchase-note";
 import {
@@ -8,48 +8,9 @@ import {
   FillInfoFormProps,
   PaymentResult,
 } from "./fill-info-form";
-import { OutlinedButton } from "@/components/outlined-button";
-
-const states = [
-  "pre-purchase",
-  "purchase-in-progress",
-  "purchase-complete",
-  "purchase-failed",
-] as const;
-
-const transitions = [
-  "started-purchase-form",
-  "payment-successfully",
-  "payment-error",
-  "back",
-] as const;
-
-const schema: FsmSchema<typeof states, typeof transitions> = {
-  initialState: "pre-purchase",
-  availableStates: states,
-  statesEvents: {
-    "pre-purchase": {
-      on: { "started-purchase-form": { moveTo: "purchase-in-progress" } },
-    },
-    "purchase-in-progress": {
-      on: {
-        "payment-successfully": { moveTo: "purchase-complete" },
-        "payment-error": { moveTo: "purchase-failed" },
-        back: { moveTo: "pre-purchase" },
-      },
-    },
-    "purchase-complete": {
-      on: {
-        back: { moveTo: "purchase-in-progress" },
-      },
-    },
-    "purchase-failed": {
-      on: {
-        back: { moveTo: "purchase-in-progress" },
-      },
-    },
-  },
-};
+import { PurchaseComplete } from "./purchase-complete";
+import { PurchaseFailed } from "./purchase-failed";
+import { schema, states, transitions } from "./fsm-schema";
 
 const PurchaseBeansPage = () => {
   const { fsmState, emit } = useFSM<typeof states, typeof transitions>(schema);
@@ -101,17 +62,13 @@ const PurchaseBeansPage = () => {
           onBackClick={onBackClick}
         />
       )}
-      {fsmState === "purchase-complete" && (
-        <Box display="flex" flexDirection="column" gap={1}>
-          <Typography>Payment Success</Typography>
-          <OutlinedButton onClick={() => emit("back")}>Back</OutlinedButton>
-        </Box>
-      )}
+      {fsmState === "purchase-complete" && <PurchaseComplete />}
       {fsmState === "purchase-failed" && (
-        <Box display="flex" flexDirection="column" gap={1}>
-          <Typography>Payment Failed</Typography>
-          <OutlinedButton onClick={() => emit("back")}>Back</OutlinedButton>
-        </Box>
+        <PurchaseFailed
+          onBackClick={() => {
+            emit("back");
+          }}
+        />
       )}
     </Box>
   );
