@@ -1,10 +1,13 @@
-export type FsmSchema<State extends string, Transition extends string> = {
-  availableStates: State[];
-  initialState: State;
+export type FsmSchema<
+  States extends readonly string[],
+  Transitions extends readonly string[]
+> = {
+  availableStates: States;
+  initialState: States[number];
   statesEvents: {
-    [value in State]?: {
+    [State in States[number]]?: {
       on: {
-        [value in Transition]?: { moveTo: State };
+        [Transition in Transitions[number]]?: { moveTo: States[number] };
       };
     };
   };

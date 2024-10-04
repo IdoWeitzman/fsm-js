@@ -1,8 +1,7 @@
 {
-  "name": "fsm-js",
+  "name": "fsm-react",
   "version": "0.0.1",
   "description": "Lightweight FSM lib based on TS",
-  "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -13,5 +12,11 @@
   "license": "ISC",
   "devDependencies": {
     "jest": "^29.7.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
+  },
+  "dependencies": {
+    "fsm-js": "*"
   }
 }

@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Ethiopian Yirgacheffe",
+    "imageUrl": "https://brownbear.co/cdn/shop/products/ethiopian-yirgacheffe-coffee-strength-3-medium-roastbrown-bear-coffeebrowgeth8227-343947.jpg?v=1701283696",
+    "region": "Ethiopia",
+    "tastingNotes": "Citrus, floral, and berry-like acidity",
+    "price": 18.99,
+    "roastType": "Light"
+  },
+  {
+    "id": 2,
+    "name": "Colombian Supremo",
+    "imageUrl": "https://www.coffeebeandirect.com/cdn/shop/products/colombian-supremo-beans-2021-square_720x.jpg?v=1723752433",
+    "region": "Colombia",
+    "tastingNotes": "Nutty, caramel, and chocolate flavors",
+    "price": 16.5,
+    "roastType": "Medium"
+  },
+  {
+    "id": 3,
+    "name": "Sumatra Mandheling",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxE3unx2RIE5wnd7ORF3ETLU3e1aSKmvh06A&s",
+    "region": "Indonesia",
+    "tastingNotes": "Earthy, spicy, and syrupy body",
+    "price": 19.25,
+    "roastType": "Dark"
+  },
+  {
+    "id": 4,
+    "name": "Guatemalan Antigua",
+    "imageUrl": "https://globalassets.starbucks.com/digitalassets/products/at-home/GuatemalaAntigua2022.jpg?impolicy=1by1_medium_630",
+    "region": "Guatemala",
+    "tastingNotes": "Chocolate, toffee, and bright acidity",
+    "price": 17.75,
+    "roastType": "Medium"
+  },
+  {
+    "id": 5,
+    "name": "Kenyan AA",
+    "imageUrl": "https://www.coffees.gr/images/detailed/9/kenya-aa-caffelab-white.jpg",
+    "region": "Kenya",
+    "tastingNotes": "Bold, fruity, and wine-like acidity",
+    "price": 21.0,
+    "roastType": "Light"
+  },
+  {
+    "id": 6,
+    "name": "Brazil Santos",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/1201/3604/files/BrazilianSantos036.jpg?v=1709579939",
+    "region": "Brazil",
+    "tastingNotes": "Mild, nutty, and low acidity",
+    "price": 15.8,
+    "roastType": "Medium"
+  },
+  {
+    "id": 7,
+    "name": "Costa Rican Tarrazu",
+    "imageUrl": "https://m.media-amazon.com/images/I/51zv2fiZ3lL._AC_UF894,1000_QL80_.jpg",
+    "region": "Costa Rica",
+    "tastingNotes": "Bright, citrusy, and balanced body",
+    "price": 18.0,
+    "roastType": "Light"
+  },
+  {
+    "id": 8,
+    "name": "Honduran Marcala",
+    "imageUrl": "https://trynewcoffee.com/wp-content/uploads/2020/04/Honduran-Marcala.jpg",
+    "region": "Honduras",
+    "tastingNotes": "Sweet, chocolate, and nutty flavors",
+    "price": 17.25,
+    "roastType": "Medium"
+  },
+  {
+    "id": 9,
+    "name": "Jamaican Blue Mountain",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzEa51vyMDc-x0KMHmapSYXuOYon9Iios6Kg&s",
+    "region": "Jamaica",
+    "tastingNotes": "Mild, smooth, and balanced acidity",
+    "price": 30.0,
+    "roastType": "Light"
+  },
+  {
+    "id": 10,
+    "name": "Panama Geisha",
+    "imageUrl": "https://m.media-amazon.com/images/I/71DXdUOdcWL.jpg",
+    "region": "Panama",
+    "tastingNotes": "Floral, jasmine, and tropical fruit notes",
+    "price": 40.0,
+    "roastType": "Light"
+  }
+]
