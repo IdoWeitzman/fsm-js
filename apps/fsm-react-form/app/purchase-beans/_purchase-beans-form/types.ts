@@ -8,6 +8,7 @@ export interface FormField {
   onChange: ChangeEventHandler<HTMLInputElement>;
   error: boolean;
   type?: ComponentProps<typeof TextField>["type"];
+  "data-testid"?: string;
 }
 
 export interface FormData {

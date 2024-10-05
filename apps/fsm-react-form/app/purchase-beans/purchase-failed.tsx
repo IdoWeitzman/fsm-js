@@ -6,7 +6,12 @@ interface PurchaseFailedProps {
 }
 
 export const PurchaseFailed = ({ onBackClick }: PurchaseFailedProps) => (
-  <Box display="flex" flexDirection="column" gap={1}>
+  <Box
+    display="flex"
+    flexDirection="column"
+    gap={1}
+    data-testid="purchase-failed-wrapper"
+  >
     <Typography>
       <b>Payment Failed.</b> Please go back and try again.
     </Typography>

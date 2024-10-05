@@ -2,7 +2,7 @@ import { Typography } from "@mui/material";
 import { BeansGallery } from "./beans-gallery";
 import Container from "@mui/material/Container";
 
-export default function Home() {
+export default function BeansShopGallery() {
   return (
     <Container
       sx={{

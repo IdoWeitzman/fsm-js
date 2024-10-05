@@ -26,6 +26,7 @@ export const FillInfoForm = ({
     </FormGroup>
     <Box display="flex" gap={1} marginTop={2}>
       <OutlinedButton
+        data-testid="fill-info-form-next-btn"
         disabled={Object.values(formData).some((val) => !val)}
         onClick={onNextClick}
       >

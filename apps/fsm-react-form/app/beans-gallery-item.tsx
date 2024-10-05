@@ -72,7 +72,7 @@ export const BeansGalleryItem = async ({
       </CardContent>
       <CardActions>
         <Link href="/purchase-beans">
-          <Button size="small" variant="contained">
+          <Button size="small" variant="contained" data-testid="buy-btn">
             Buy Now
           </Button>
         </Link>

@@ -16,5 +16,6 @@ export const FormFieldsRenderer = ({ fields }: FormFieldsProps) =>
       required
       error={formFieldData.error}
       type={formFieldData.type}
+      dataTestId={formFieldData["data-testid"]}
     />
   ));

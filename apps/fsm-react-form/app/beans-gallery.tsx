@@ -8,7 +8,7 @@ export const BeansGallery = async () => {
   const beansGalleryItems: CoffeeBean[] = await getCoffeeBeansData();
 
   return (
-    <Grid height="100%" container spacing={2}>
+    <Grid height="100%" container spacing={2} data-testid="gallery">
       {beansGalleryItems.map((beansItemData) => (
         <Grid
           size={{

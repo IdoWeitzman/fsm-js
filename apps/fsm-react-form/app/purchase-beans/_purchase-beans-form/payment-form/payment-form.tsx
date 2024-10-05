@@ -36,6 +36,7 @@ export const PaymentForm = ({
           flexDirection: "column",
           gap: 1,
         }}
+        data-testid="payment-form-wrapper"
       >
         <PaymentFormFields formData={formData} updateForm={onFieldChange} />
       </FormGroup>
@@ -43,6 +44,7 @@ export const PaymentForm = ({
         <OutlinedButton
           disabled={Object.values(formData).some((val) => !val)}
           onClick={onPayClick}
+          data-testid="payment-form-pay-btn"
         >
           Pay
         </OutlinedButton>

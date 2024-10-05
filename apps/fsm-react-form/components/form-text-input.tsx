@@ -9,6 +9,7 @@ interface FormTextInputProps {
   error?: boolean;
   onChange: ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>;
   value?: string | number;
+  dataTestId?: string;
 }
 export const FormTextInput = ({
   labelText,
@@ -18,6 +19,7 @@ export const FormTextInput = ({
   value,
   error,
   onChange,
+  dataTestId,
 }: FormTextInputProps) => {
   return (
     <FormControl error={error} required={required}>
@@ -28,6 +30,7 @@ export const FormTextInput = ({
         label={labelText}
         type={type}
         value={value}
+        data-testid={dataTestId}
       />
     </FormControl>
   );

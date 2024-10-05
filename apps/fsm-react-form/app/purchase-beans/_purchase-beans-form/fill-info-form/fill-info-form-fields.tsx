@@ -18,6 +18,7 @@ export const FillInfoFormFields = ({
       value: formData.name,
       onChange: (e) => updateForm("name", e.target.value),
       error: formData.name === "",
+      "data-testid": "form-field-name",
     },
     {
       id: "address",
@@ -25,6 +26,7 @@ export const FillInfoFormFields = ({
       value: formData.address,
       onChange: (e) => updateForm("address", e.target.value),
       error: formData.address === "",
+      "data-testid": "form-field-address",
     },
   ];
 

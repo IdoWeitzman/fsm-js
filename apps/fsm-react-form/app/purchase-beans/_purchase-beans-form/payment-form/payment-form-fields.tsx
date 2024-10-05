@@ -18,6 +18,7 @@ export const PaymentFormFields = ({
       value: formData.creditCardNum,
       onChange: (e) => updateForm("creditCardNum", e.target.value),
       error: formData.creditCardNum === "",
+      "data-testid": "form-field-credit-card-number",
     },
     {
       id: "cc-exp",
@@ -25,6 +26,7 @@ export const PaymentFormFields = ({
       value: formData.expiration,
       onChange: (e) => updateForm("expiration", e.target.value),
       error: formData.expiration === "",
+      "data-testid": "form-field-credit-card-exp",
     },
     {
       id: "cc-cvv",
@@ -33,6 +35,7 @@ export const PaymentFormFields = ({
       type: "number",
       onChange: (e) => updateForm("cvv", e.target.value),
       error: formData.cvv === 0,
+      "data-testid": "form-field-credit-card-cvv",
     },
   ];
 

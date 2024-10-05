@@ -41,7 +41,7 @@ const PurchaseBeansPage = () => {
   };
 
   return (
-    <Box height="100vh" margin={3}>
+    <Box height="100vh" margin={3} data-testid="purchase-beans-form-wrapper">
       <Typography marginBottom={3} variant="h2" fontWeight={600}>
         Purchase Coffee Bean
       </Typography>
