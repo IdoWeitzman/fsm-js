@@ -19,3 +19,9 @@ A lightweight finite-state-machine library for managing complex application stat
 An adapter package for integrating **fsm-js** into React applications using the `useFSM` hook.
 
 - [Readme](./packages/fsm-react/README.md)
+
+### How to run locally?
+
+1. From the root of the project run `npm install`.
+2. From the root of the project run npm run dev.
+3. Go to http://localhost:3000
