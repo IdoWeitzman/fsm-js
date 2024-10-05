@@ -1,36 +1,23 @@
 import { OutlinedButton } from "@/components/outlined-button";
 import { Box, FormGroup } from "@mui/material";
-import { useState } from "react";
-import { FILL_INFO_FORM_INITIAL_VALUES } from "./constants";
-import { FillInfoFormFields } from "./fill-info-form-fields";
+import { PaymentFormFields } from "./payment-form-fields";
+import { FormData, UpdateFormFn } from "../types";
 
 export type PaymentResult = "failed" | "succeeded";
 
 export interface FillInfoFormProps {
   onPaymentHandled: (paymentResult: PaymentResult) => void;
   onBackClick: () => void;
+  onFieldChange: UpdateFormFn<"secondStep">;
+  formData: FormData["secondStep"];
 }
 
-export interface FormData {
-  name?: string;
-  address?: string;
-  creditCardNum?: string;
-  cvv?: number;
-  expiration?: string;
-}
-
-export type UpdateFormFn = (
-  key: keyof FormData,
-  value: string | number
-) => void;
-
-export const FillInfoForm = ({
+export const PaymentForm = ({
   onPaymentHandled,
   onBackClick,
+  onFieldChange,
+  formData,
 }: FillInfoFormProps) => {
-  const [formData, setFormData] = useState<FormData>(
-    FILL_INFO_FORM_INITIAL_VALUES
-  );
   const onPayClick = () => {
     // a function that mocks payment using external service.
     // it's randomly succeeds or fails.
@@ -39,10 +26,6 @@ export const FillInfoForm = ({
 
       onPaymentHandled(rand === 0 ? "failed" : "succeeded");
     }, 1000);
-  };
-
-  const updateForm: UpdateFormFn = (key, value) => {
-    setFormData({ ...formData, [key]: value });
   };
 
   return (
@@ -54,7 +37,7 @@ export const FillInfoForm = ({
           gap: 1,
         }}
       >
-        <FillInfoFormFields formData={formData} updateForm={updateForm} />
+        <PaymentFormFields formData={formData} updateForm={onFieldChange} />
       </FormGroup>
       <Box display="flex" gap={1} marginTop={2}>
         <OutlinedButton

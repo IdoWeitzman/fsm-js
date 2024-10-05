@@ -1,4 +1,4 @@
-import { FsmSchema } from "./types";
+import { FsmSchema } from "../types";
 
 export class FSM<
   States extends readonly string[],
@@ -15,7 +15,6 @@ export class FSM<
     this._statesEvents = schema.statesEvents;
   }
 
-  //TODO: find a way to type eventName properly
   public emit = (eventName: Transitions[number]) => {
     const stateEvent = this._statesEvents[this._currentState]?.on[eventName];
     const validationErr = this._validateEvent(eventName);
@@ -39,7 +38,6 @@ export class FSM<
     return this._currentState;
   }
 
-  //TODO: find  way to type eventName properly
   private _validateEvent = (eventName: Transitions[number]) => {
     const validations: {
       description: string;

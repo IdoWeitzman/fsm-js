@@ -1,11 +1,15 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
+import styles from "./styles.module.css";
 
 export const PurchaseComplete = () => (
   <Box display="flex" flexDirection="column" gap={1}>
     <Typography>
-      Payment Success! We will be in touch shortly for delivery.
+      Payment Successful!
       <br />
-      For your next purchase use the coupon <b>INTUIT2024</b> for extra 10% off!
+      Thank you for shopping with us.
+      <br />
+      Use this coupon to get 10% off your next purchase: <b>INTUIT2024</b>
     </Typography>
+    <Box className={styles.firework} />
   </Box>
 );

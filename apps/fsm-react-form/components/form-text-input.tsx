@@ -8,12 +8,14 @@ interface FormTextInputProps {
   type?: ComponentProps<typeof OutlinedInput>["type"];
   error?: boolean;
   onChange: ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>;
+  value?: string | number;
 }
 export const FormTextInput = ({
   labelText,
   required,
   id,
   type,
+  value,
   error,
   onChange,
 }: FormTextInputProps) => {
@@ -25,6 +27,7 @@ export const FormTextInput = ({
         id={id}
         label={labelText}
         type={type}
+        value={value}
       />
     </FormControl>
   );

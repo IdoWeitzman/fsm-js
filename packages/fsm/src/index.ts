@@ -1,2 +1,2 @@
-export * from "./fsm";
+export * from "./fsm/fsm";
 export * from "./types";
