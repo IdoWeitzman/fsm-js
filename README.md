@@ -12,7 +12,7 @@ To see example app that demonstrates usage of the app, go to the GitHub Page:
 
 A lightweight finite-state-machine library for managing complex application states with a simple and intuitive API.
 
-- [Readme](./packages/fsm-js/README.md)
+- [Readme](./packages/fsm/README.md)
 
 ### fsm-react
 

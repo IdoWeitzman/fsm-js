@@ -2,11 +2,8 @@
 
 An adapter package for integrating fsm-js into React applications.
 
-# Installation
+## Usage
 
-Coming soon!
-
-Usage
 Import the useFSM hook and define your FSM schema:
 
 ```typescript
@@ -51,3 +48,7 @@ In this example:
 - **Use**: The useFSM hook to manage the state machine within the component.
 - **Access**: The fsmState for the current state and emit to trigger transitions.
 - **Render**: UI elements based on the current FSM state.
+
+## Installation
+
+Coming soon!

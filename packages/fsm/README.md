@@ -15,10 +15,6 @@ A **lightweight**, **zero-dependency**, and **easy-to-use** Finite State Machine
 - **Strong Typing**: Reduce runtime errors with TypeScript's compile-time checks.
 - **Flexibility**: Customize your state machine to fit any application logic.
 
-## Installation
-
-Coming soon!
-
 ## Usage
 
 Define your FSM schema and create an instance:
@@ -103,3 +99,7 @@ type FsmSchema<
   };
 };
 ```
+
+## Installation
+
+Coming soon!
