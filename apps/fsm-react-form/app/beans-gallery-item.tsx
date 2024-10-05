@@ -1,3 +1,4 @@
+"use server";
 import { CoffeeBean } from "./types";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -19,7 +20,9 @@ const responsiveDisplay = {
   },
 };
 
-export const BeansGalleryItem = ({ beansItemData }: BeansGalleryItemProps) => {
+export const BeansGalleryItem = async ({
+  beansItemData,
+}: BeansGalleryItemProps) => {
   return (
     <Card
       sx={{
