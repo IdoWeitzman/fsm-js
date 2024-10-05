@@ -1,12 +1,18 @@
-"use server";
+import type { InferGetStaticPropsType, GetStaticProps } from "next";
 import { getCoffeeBeansData } from "@/server_mock/handler";
 import { CoffeeBean } from "./types";
 import { BeansGalleryItem } from "./beans-gallery-item";
 import Grid from "@mui/material/Grid2";
+import beansDataMock from "../server_mock/db.json";
 
-export const BeansGallery = async () => {
-  const beansGalleryItems: CoffeeBean[] = await getCoffeeBeansData();
+interface BeansGalleryProps {
+  beansGalleryItems: CoffeeBean[];
+}
+export const getStaticProps = async () => {
+  return { props: { beansGalleryItems: beansDataMock } };
+};
 
+export const BeansGallery = ({ beansGalleryItems }: BeansGalleryProps) => {
   return (
     <Grid height="100%" container spacing={2} data-testid="gallery">
       {beansGalleryItems.map((beansItemData) => (
