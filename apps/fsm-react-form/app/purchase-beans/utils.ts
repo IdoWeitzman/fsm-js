@@ -1,7 +1,6 @@
 import { ComponentProps } from "react";
 import { FormStepper } from "./form-stepper";
 import { states, transitions } from "./fsm-schema";
-import { PaymentForm } from "./_purchase-beans-form/payment-form/payment-form";
 import { PaymentResult } from "./_purchase-beans-form/types";
 import { emitFn } from "./types";
 
