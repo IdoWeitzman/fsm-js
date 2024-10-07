@@ -1,5 +1,4 @@
 "use server";
-import { getCoffeeBeansData } from "@/server_mock/handler";
 import { CoffeeBean } from "./types";
 import { BeansGalleryItem } from "./beans-gallery-item";
 import Grid from "@mui/material/Grid2";
