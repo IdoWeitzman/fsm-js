@@ -4,9 +4,13 @@ import { CoffeeBean } from "./types";
 import { BeansGalleryItem } from "./beans-gallery-item";
 import Grid from "@mui/material/Grid2";
 
-export const BeansGallery = async () => {
-  const beansGalleryItems: CoffeeBean[] = await getCoffeeBeansData();
+interface BeansGalleryProps {
+  beansGalleryItems: CoffeeBean[];
+}
 
+export const BeansGallery = async ({
+  beansGalleryItems,
+}: BeansGalleryProps) => {
   return (
     <Grid height="100%" container spacing={2} data-testid="gallery">
       {beansGalleryItems.map((beansItemData) => (
