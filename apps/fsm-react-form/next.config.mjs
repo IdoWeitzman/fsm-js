@@ -1,7 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: "export",
-  basePath: "/fsm-js",
-};
+const nextConfig = {};
 
 export default nextConfig;
