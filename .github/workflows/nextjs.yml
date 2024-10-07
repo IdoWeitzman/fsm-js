@@ -20,6 +20,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Detect package manager
         id: detect-package-manager
         run: |
@@ -33,19 +34,23 @@ jobs:
             echo "manager=npm" >> $GITHUB_OUTPUT
             echo "command=ci" >> $GITHUB_OUTPUT
             echo "runner=npx --no-install" >> $GITHUB_OUTPUT
-@@ -48,46 +39,49 @@
+            exit 0
+          else
             echo "Unable to determine package manager"
             exit 1
           fi
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
           static_site_generator: next
+
       - name: Restore cache
         uses: actions/cache@v4
         with:
@@ -54,14 +59,17 @@ jobs:
           key: ${{ runner.os }}-nextjs-${{ hashFiles('apps/fsm-react-form/**/package-lock.json', 'apps/fsm-react-form/**/yarn.lock') }}-${{ hashFiles('apps/fsm-react-form/**.[jt]s', 'apps/fsm-react-form/**.[jt]sx') }}
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('apps/fsm-react-form/**/package-lock.json', 'apps/fsm-react-form/**/yarn.lock') }}-
+
       - name: Install dependencies
         run: |
           cd apps/fsm-react-form
           ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+
       - name: Build with Next.js
         run: |
           cd apps/fsm-react-form
           ${{ steps.detect-package-manager.outputs.runner }} next build
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
